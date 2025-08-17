@@ -10,7 +10,7 @@ import json
 
 # Import our custom modules
 from rag_pipeline import RAGPipeline
-from utils import setup_logging, validate_pdf
+from utils import setup_logging, validate_pdf, get_pdf_metadata, estimate_processing_time
 
 # Configure logging
 setup_logging()

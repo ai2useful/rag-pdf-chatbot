@@ -1,0 +1,8 @@
+{
+  "default_model": "mistral-7b-instruct-v0.1.Q4_K_M.gguf",
+  "chunk_size": 1000,
+  "chunk_overlap": 200,
+  "max_sources": 3,
+  "max_tokens": 1000,
+  "temperature": 0.1
+}
