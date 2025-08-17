@@ -1,0 +1,65 @@
+{
+  "app_config": {
+    "name": "RAG PDF Chatbot",
+    "version": "1.0.0",
+    "description": "Chat with your PDFs using free AI models"
+  },
+  "model_config": {
+    "default_model": "mistral-7b-instruct-v0.1.Q4_K_M.gguf",
+    "embedding_model": "all-MiniLM-L6-v2",
+    "available_models": [
+      "mistral-7b-instruct-v0.1.Q4_K_M.gguf",
+      "llama-2-7b-chat.Q4_K_M.gguf",
+      "codellama-7b-instruct.Q4_K_M.gguf"
+    ]
+  },
+  "processing_config": {
+    "chunk_size": 1000,
+    "chunk_overlap": 200,
+    "max_sources": 3,
+    "max_tokens": 1000,
+    "temperature": 0.1,
+    "top_p": 0.95,
+    "repeat_penalty": 1.1
+  },
+  "ui_config": {
+    "page_title": "RAG PDF Chatbot",
+    "page_icon": "📚",
+    "layout": "wide",
+    "sidebar_state": "expanded",
+    "theme": "auto"
+  },
+  "paths": {
+    "upload_dir": "uploaded_pdfs",
+    "vector_store_dir": "vector_store", 
+    "models_dir": "models",
+    "logs_dir": "logs",
+    "backups_dir": "backups"
+  },
+  "performance": {
+    "enable_caching": true,
+    "max_file_size_mb": 500,
+    "max_files_per_upload": 10,
+    "processing_timeout_minutes": 30,
+    "query_timeout_seconds": 60
+  },
+  "logging": {
+    "level": "INFO",
+    "format": "%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+    "max_log_size_mb": 100,
+    "backup_count": 5
+  },
+  "security": {
+    "allowed_extensions": [".pdf"],
+    "max_query_length": 1000,
+    "enable_file_validation": true,
+    "sanitize_filenames": true
+  },
+  "features": {
+    "enable_system_info": true,
+    "enable_model_info": true,
+    "enable_export": true,
+    "enable_backup": true,
+    "enable_batch_processing": false
+  }
+}
